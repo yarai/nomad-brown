@@ -8,6 +8,10 @@
 /*****************************************************************************
  * Main elements
  ****************************************************************************/
+@font-face {
+    font-family: "Karton";
+    src: url(/static/fonts/Karton.otf) format("truetype");
+}
 html {
   overflow-y: scroll;
 }
