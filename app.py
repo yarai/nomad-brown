@@ -8,7 +8,11 @@ db = dataset.connect('sqlite:///file.db')
 
 # when someone sends a GET to / render sign_form.html
 @app.route('/', methods=['GET'])
-def sign_form():
+def home():
     return render_template('pages/index.html')
+
+@app.route('/events', methods=['GET'])
+def events():
+	location = request.args.get('location','')
 
 app.run(debug=True)
