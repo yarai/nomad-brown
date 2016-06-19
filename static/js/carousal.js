@@ -1,5 +1,5 @@
-(function() {
-    $('#carousal').slick({
-        arrows: false
-    });
-}).call(this);
+// (function() {
+//     $('#carousal').slick({
+//         arrows: false
+//     });
+// }).call(this);

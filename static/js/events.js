@@ -15,18 +15,50 @@ function printResponse(json) {
   parsed = JSON.parse(json)
   console.log(parsed.events)
   parsed.events.forEach(carousel) 
+
+    $('#carousal').slick({
+        arrows: false
+    });
 }
 
 function carousel(thing, index, array) {
-    console.log(thing)
+    // console.log(thing)
     var modal = document.createElement("div")
     modal.class = "modal"
-    var text = document.createTextNode(thing.name.html)
+    var text = document.createTextNode(thing.name.text)
+
+    var des = document.createTextNode(thing.description.text)
+    // des.align = "center"
     var url = document.createElement("a")
+    // url.align = center
     url.href = thing.url
     url.innerHTML = "LINK"
-    modal.appendChild(text)
-    modal.appendChild(url)
+    var p = document.createElement("p")
+    var p2 = document.createElement("p")
+    var p3 = document.createElement("p")
+    var p4 = document.createElement("p")
+
+    var img = document.createElement("IMG")
+    // img.align = "center"
+    p.appendChild(text)
+    modal.appendChild(p)
+    p2.appendChild(des)
+    
+    modal.appendChild(p2)
+    p3.appendChild(url)
+
+    modal.appendChild(p3)
+    p4.appendChild(img)
+
+    
+    if (thing.logo) {
+      img.src = thing.logo.url
+    }
+    
+    modal.appendChild(p4)
+    
+
+
 
     document.getElementById("carousal").appendChild(modal)
   }
