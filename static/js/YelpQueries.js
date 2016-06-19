@@ -20,11 +20,11 @@
 */
 
 var YelpQueries = function(	
-			ajaxSuccessCallback,
-			ajaxErrorCallback,
-			loadingCompleteCallback,
-			errorCallback,
-			radius)
+	ajaxSuccessCallback,
+	ajaxErrorCallback,
+	loadingCompleteCallback,
+	errorCallback,
+	radius)
 {
 	this.ajaxErrorCallback = ajaxErrorCallback;
 	this.ajaxSuccessCallback = ajaxSuccessCallback;
@@ -84,11 +84,28 @@ YelpQueries.prototype.loadMoreBusinesses = function(lastSearchResultCount)
 YelpQueries.prototype.fillYelpData = function(data)
 {
 	console.log("IN PARSE YELP");
-	console.log(data);
+	//console.log(data);
 	this.loadYelpData(data, true);
-	
+
 	//search yelp again (if we can expect to get more results)
 	this.loadMoreBusinesses(data.businesses.length);
+
+	var myBusinesses = {};
+	for (i = 0; i < data["businesses"].length; i++) { 
+		
+		if (data["businesses"][i].is_closed == false) {
+		    //text += data["businesses"][i] + "<br>";
+		    
+		    var index = myBusinesses.length
+		    myBusinesses[index] = {}
+		    myBusinesses[index].name = data["businesses"][i].name
+		    myBusinesses[index].address = data["businesses"][i].location
+		    myBusinesses[index].link = data["businesses"][i].url
+		    myBusinesses[index].image = data["businesses"][i].image_url
+		}
+		
+	}
+	console.log(myBusinesses);
 };
 
 

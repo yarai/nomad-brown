@@ -4,10 +4,10 @@
 * holds the knockout data in observable arrays
 * accessed by Manager 
 */
-var NeighborHoodModel =  function(map,db)
+var NeighborHoodModel =  function(db)
 {
 	var self = this;
-	self.map = gmap; //the google map
+	//self.map = gmap; //the google map
 	self.filter = ko.observable(""); // the current filter for the  yelp businesses
 	self.includeDeals = ko.observable(false); //filters out businesses based on whether deals are available
 	self.businessList = ko.observableArray();//the businesses from yelp
@@ -28,10 +28,10 @@ var NeighborHoodModel =  function(map,db)
 * and the adding/deleting of map markers from the google maps
 *  
 */
-var Manager = function(gmap, db)
+var Manager = function( db)
 {
 	var self = this;
-	self.model = new NeighborHoodModel(gmap,db);
+	self.model = new NeighborHoodModel(db);
 	
 	//our filtered business list
 	//the model is filtered using model.filter and model.includeDeals
@@ -112,7 +112,7 @@ var Manager = function(gmap, db)
 function initKnockout()
 {
 
-	mgr= new  Manager(gmap, yelpQuery.yelpBusinesses);
+	mgr= new  Manager( yelpQuery.yelpBusinesses);
 	ko.applyBindings(mgr);
 
 };

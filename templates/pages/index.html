@@ -7,12 +7,15 @@
 <div class="app-container">
 	<div class="title-page">
 		<h1 class="main-title">Nomad</h1>
-		<div id="initial-inputs" class="form-input">
-		    <input id="location" type="text" name="location" placeholder="Location" />
-		    <input id="duration" type="time" name="duration" placeholder="" />
-		    <textarea placeholder="Message" onkeyup="adjust_textarea(this)"></textarea>
-		    <input type="button" value="Explore" />
-		</div>
+		<form id="initial-inputs" action="/events" method="get" class="form-input">
+			<label for="location">LOCATION</label>
+		    <input id="location" type="text" name="location" placeholder="" required />
+		    <label for="location">END TIME</label>
+		    <input id="endtime" type="time" name="endtime" placeholder="" required />
+		    <label for="travel">TRAVEL METHOD</label>
+		    <input id="travel" type="text" name="travel" placeholder="" required />
+		    <input type="submit" value="Explore" id="explore"/>
+		</form>
 	</div>
 </div>
 {% endblock %}
