@@ -23,4 +23,6 @@
     		alert("Please fill in the whole form");
     	}
     });
+
+    $('.single-item').slick();
 }).call(this);

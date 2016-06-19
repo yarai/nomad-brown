@@ -1,0 +1,25 @@
+{% extends 'layouts/main.html' %}
+{% block title %}Nomad{% endblock %}
+{% block style %}
+	<link type="text/css" rel="stylesheet" href="/static/css/events.css" />
+	<link type="text/css" rel="stylesheet" href="/static/css/slick.css" />
+{% endblock %}
+{% block content %}
+<<<<<<< HEAD
+
+=======
+<div class="app-container">
+	<div class="title-page">
+		<h1 class="main-title">N o m a d</h1>
+		<div id="initial-inputs">
+		    <input id="location" type="text" name="location" placeholder="Location" />
+		    <input id="duration" type="time" name="duration" placeholder="" />
+		    <input id="explore" type="button" value="Explore" />
+		</div>
+	</div>
+</div>
+{% block script %}
+  <script type="text/javascript" src="static/js/events.js" defer></script>
+{% endblock %}
+>>>>>>> 0c3bb680993de7c85a522d0ceb8c38c129c61012
+{% endblock %}
