@@ -10,5 +10,8 @@ def home():
 @app.route('/events', methods=['GET'])
 def events():
 	location = request.args.get('location','')
+	endTime = request.args.get('endtime','')
+	travelMethod = request.args.get('travel','')
+	return render_template('pages/events.html')
 
 app.run(debug=True)
