@@ -14,6 +14,10 @@ html {
 a {
   cursor: pointer;
 }
+
+body {
+	margin: 0;
+}
 ::selection {
   background: #555;
   color: #FFF;
@@ -27,9 +31,6 @@ a {
   color: #FFF;
 }
 
-body {
-  background-color: black; 
-}
 ::-webkit-input-placeholder { 
   text-transform: uppercase; 
   letter-spacing: 2pt; 
@@ -49,76 +50,168 @@ body {
   text-transform: uppercase; 
   letter-spacing: 2pt; 
 }
-.form-input{
-    font-family: 'Helvetica', arial, sans;
-    width: 300px;
-    padding: 5px;
-    background-color: black;
+​
+/*when there needs to be a thing in the background—image or map*/
+#bg {
+	width:100vw;
+	height:100vh;
+	position: fixed;
+	z-index: 1;
+	background-image: url(assets/background.jpg);
 }
-.form-input input[type="text"],
-.form-input input[type="date"],
-.form-input input[type="datetime"],
-.form-input input[type="email"],
-.form-input input[type="number"],
-.form-input input[type="search"],
-.form-input input[type="time"],
-.form-input input[type="url"],
-.form-input input[type="password"],
-.form-input textarea,
-.form-input select 
-{
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    outline: none;
-    display: block;
-    width: 100%;
-    opacity: .6;
-    padding: 7px;
-    border: none;
-    border-bottom: 1px solid white;
-    background: transparent;
-    margin-bottom: 10px;
-    font: 14px Helvetica, sans-serif;
-    color: white; 
-    height: 45px;
+​
+/*logo on landing page*/
+#biggerlogo{
+	width:85%;
+	height:10%;
+	position: relative;
+	padding-right: 7.5%;
+	padding-left: 7.5%;
+	padding-top:20%;
+	padding-bottom: 2.25%;
+	text-align: center;
+	z-index: 10;
+}
+​
+#biggerlogo img {
+	width: 100%;
+}
+​
+/*landing page controls*/
+#firstinput {
+	width:90%;
+	position: relative;
+	margin-left: 5%;
+	margin-top:25%;
+	padding-bottom: 2.25%;
+	text-align: center;
+	z-index: 10;
 }
 
-.form-input input:focus {
-  opacity: 1; 
+/*to control spacing in controls*/
+#firstinput .fields {
+	padding-top:5%;
+	display: block;
 }
-.form-input textarea{
-    resize:none;
-    overflow: hidden;
+
+/*bar for logo + back button*/
+#topbar {
+	width:90%;
+	height:2.5%;
+	position: relative;
+	padding-right: 5%;
+	padding-left: 5%;
+	padding-top:2.25%;
+	padding-bottom: 2.25%;
+	background-color: #7B5F80;
+	text-align: center;
+	z-index: 10;
 }
-.form-input input[type="button"], 
-.form-input input[type="submit"]{
-    -moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
-    -webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
-    box-shadow: inset 0px 1px 0px 0px #45D6D6;
-    background-color: #2CBBBB;
-    border: 1px solid #27A0A0;
-    display: inline-block;
-    cursor: pointer;
-    color: #FFFFFF;
-    font-family: 'Helvetica', sans-serif;
-    font-size: 14px;
-    padding: 8px 18px;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 2pt; 
-    font-weight: bold;
-    border-radius: 10pt; 
-    padding-left: 100px;
-    padding-right: 100px; 
-    opacity: .9; 
+​
+#topbar img{
+	height:100%;
+	position: relative;
 }
-.form-input input[type="button"]:hover, 
-.form-input input[type="submit"]:hover {
-    background:linear-gradient(to bottom, #34CACA 5%, #30C9C9 100%);
-    background-color:#34CACA;
-    text-align: center;
-    margin:auto;
+
+/*bar for when there are controls on top of events + maps*/
+#topcontrols {
+	width:90%;
+	height: 10%;
+	position: relative;
+	padding-right: 5%;
+	padding-left: 5%;
+	padding-top:2.25%;
+	padding-bottom: 2.25%;
+	background-color: #7B5F80;
+	z-index: 10;
+}
+
+/*editing location while top controls is up*/
+#location{
+	width:100%;
+	display: inline-block;
+	height:40%;
+	border-bottom: 1px #fff solid;
+}
+
+/*editing duration and transportation while top controls is up*/
+#duration, #transportation {
+	width:100%;
+	margin-right:5%;
+	height:40%;
+	display: inline-block;
+	border-bottom: 1px #fff solid;
+}
+
+/*click to toggle preferences*/
+#choices {
+	width:10%;
+	display: inline-block;
+}
+​
+/*div to put carousel in*/
+#carousel {
+	background-color: #E6E6E6;
+	position: relative;
+	margin-top:5%;
+	width: 100%;
+	height:65%;
+}
+​
+/*div for toggle interests*/
+#interests {
+	width:90%;
+	height: 90%;
+	position: relative;
+	padding-right: 5%;
+	padding-left: 5%;
+	padding-top:2.25%;
+	padding-bottom: 2.25%;
+	background-color: #7B5F80;
+	z-index: 10;
+}
+​
+/*icons to toggle interests on and off*/
+.gridding {
+	float: left;
+	width:33%;
+	text-align: center;
+}
+​
+.gridding img {
+	width: 100%;
+	padding-bottom: 5%;
+	padding-top: 10%;
+}
+
+/*when interests are toggled off*/
+.deselected {
+	opacity: 0.3;
+}
+
+/*button at the bottom*/
+#actionbutton {
+	position:fixed;
+	background-color: #7BCCC2;
+	width:90%;
+	height:6%;
+	bottom:5%;
+	left:5%;
+	text-align: center;
+	z-index: 10;
+}
+
+/*giving directions while in map*/
+#directions {
+	position:fixed;
+	background-color: #7BCCC2;
+	width:90%;
+	height:15%;
+	bottom:0%;
+	padding-left:5%;
+	padding-right:5%;
+	text-align: center;
+	z-index: 10;
 }
 /* Main elements end */
 
