@@ -1,4 +1,5 @@
 (function() {
+
 	function isEmpty(input) {
 		return input == null || input.isEmpty;
 	}
@@ -23,4 +24,6 @@
     		alert("Please fill in the whole form");
     	}
     });
+
 }).call(this);
+

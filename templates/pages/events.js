@@ -1,10 +1,9 @@
 console.log("ho")
-(function() {
-  var location = getParameterByName("location")
-  var end_time = getParameterByName("endtime")
-  var travel = getParameterByName("travel")
 
-  // var eb = Eventbrite()
-  // eb.request(location, end_time)
-  console.log("GOT HERE")
-}).call(this);
+var location = getParameterByName("location")
+var end_time = getParameterByName("endtime")
+var travel = getParameterByName("travel")
+
+var eb = Eventbrite()
+eb.request(location, end_time)
+console.log("GOT HERE")
