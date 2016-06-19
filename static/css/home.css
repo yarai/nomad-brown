@@ -45,6 +45,18 @@ h1 {
 	text-align: center;
 }
 
+#topcontrols {
+	width:90%;
+	height: 10%;
+	position: relative;
+	padding-right: 5%;
+	padding-left: 5%;
+	padding-top:2.25%;
+	padding-bottom: 2.25%;
+	background-color: #7B5F80;
+	z-index: 10;
+}
+
 .form-input{
     font-family: 'Helvetica', arial, sans;
     width: 300px;
