@@ -61,14 +61,10 @@
   <script type="text/javascript" src="/static/js/libs/bootstrap-3.1.1.min.js" defer></script>
   <script type="text/javascript" src="/static/js/plugins.js" defer></script>
   <script type="text/javascript" src="/static/js/script.js" defer></script>
-<<<<<<< HEAD
-  <script type="text/javascript" src="static/js/common.js" defer></script>
-  <script type="text/javascript" src="static/js/eventbrite.js" defer></script>
-=======
   <script type="text/javascript" src="/static/js/common.js" defer></script>
   <script type="text/javascript" src="/static/js/yelp.js" defer></script>
   <script type="text/javascript" src="/static/js/eventbrite.js" defer></script>
->>>>>>> 97fcb24bc4eafbe8f18ff7754da877512ec91fcf
+
   {% block script %}{% endblock %}
   <!-- Google Analytics - Change UA-XXXXX-X to be your site's ID -->
   <script>
@@ -92,36 +88,6 @@
       </a>
     
   </script>
-   
-  
-    <div id="map-canvas"></div>
-
-  <div id="listResults" class=" navbar-fixed-top">
-    <div class="listAlign">  
-      <div id="well1">
-          <div id="errorMsg"></div>
-        <form onsubmit="return false">
-          <div class="text-center container-full" >
-            <span id="dealsId">
-            <input  class="filterText"  data-bind="value: model.filter, valueUpdate: 'afterkeydown'" placeholder="type to filter list" />  
-              <a href="#"  data-bind="click: toggleMenu">
-                <span class="menuPullOut"  data-bind="text: model.menuExpanded"></span>                 
-              </a>
-              <br/>
-            
-              <input type="checkbox" data-bind="checked:model.includeDeals, valueUpdate: 'afterkeydown'"/>
-              include deals
-            </span>
-          </div>
-        </form>         
-      </div>
-      <div  class="" id="well2"  data-bind="visible: model.showMenu">
-          <div class="list-group  yelpResult">
-            <span  data-bind="template: {name: 'yelp-businesses', foreach: filteredBusinesses}"></span>
-          </div>
-      </div>      
-    </div>
-  </div>
   
   
     <!--google map scripts-->

@@ -1,8 +1,9 @@
+(function() {
+	var location = getParameterByName("location")
+	var end_time = getParameterByName("endtime")
+	var travel = getParameterByName("travel")
 
-var location = getParameterByName("location")
-var end_time = getParameterByName("endtime")
-var travel = getParameterByName("travel")
-
-var eb = Eventbrite()
-eb.request(location, end_time)
-console.log("GOT HERE")
+	var eb = new Eventbrite()
+	eb.request(location, end_time)
+	console.log("GOT HERE")
+}).call(this);
