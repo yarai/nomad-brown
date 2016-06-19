@@ -27,6 +27,12 @@ a {
   color: #FFF;
 }
 
+.main-title {
+	color: white;
+	font-family: 'Karton';
+	font-size: 34px;
+}
+
 body {
   background-color: black; 
 }
