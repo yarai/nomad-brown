@@ -13,8 +13,23 @@ function Eventbrite () {
 
 function printResponse(json) {
   parsed = JSON.parse(json)
-  console.log(parsed)
+  console.log(parsed.events)
+  parsed.events.forEach(carousel) 
 }
+
+function carousel(thing, index, array) {
+    console.log(thing)
+    var modal = document.createElement("div")
+    modal.class = "modal"
+    var text = document.createTextNode(thing.name.html)
+    var url = document.createElement("a")
+    url.href = thing.url
+    url.innerHTML = "LINK"
+    modal.appendChild(text)
+    modal.appendChild(url)
+
+    document.getElementById("carousal").appendChild(modal)
+  }
 
 function httpGetAsync(theUrl, callback) {
     var xmlHttp = new XMLHttpRequest();
