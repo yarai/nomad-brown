@@ -11,4 +11,4 @@ db = dataset.connect('sqlite:///file.db')
 def sign_form():
     return render_template('pages/index.html')
 
-app.run()
+app.run(debug=True)

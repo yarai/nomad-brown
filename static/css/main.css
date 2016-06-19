@@ -26,6 +26,99 @@ a {
   background: #555;
   color: #FFF;
 }
+
+body {
+  background-color: black; 
+}
+::-webkit-input-placeholder { 
+  text-transform: uppercase; 
+  letter-spacing: 2pt; 
+}
+
+::-moz-placeholder{ 
+  text-transform: uppercase; 
+  letter-spacing: 2pt; 
+}
+
+:-ms-input-placeholder { 
+  text-transform: uppercase; 
+  letter-spacing: 2pt; 
+}
+
+:-moz-placeholder { 
+  text-transform: uppercase; 
+  letter-spacing: 2pt; 
+}
+.form-input{
+    font-family: 'Helvetica', arial, sans;
+    width: 500px;
+    padding: 30px;
+    background-color: black;
+    margin: 50px auto;
+}
+.form-input input[type="text"],
+.form-input input[type="date"],
+.form-input input[type="datetime"],
+.form-input input[type="email"],
+.form-input input[type="number"],
+.form-input input[type="search"],
+.form-input input[type="time"],
+.form-input input[type="url"],
+.form-input input[type="password"],
+.form-input textarea,
+.form-input select 
+{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    display: block;
+    width: 100%;
+    opacity: .6;
+    padding: 7px;
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    margin-bottom: 10px;
+    font: 14px Helvetica, sans-serif;
+    color: white; 
+    height: 45px;
+}
+
+.form-input input:focus {
+  opacity: 1; 
+}
+.form-input textarea{
+    resize:none;
+    overflow: hidden;
+}
+.form-input input[type="button"], 
+.form-input input[type="submit"]{
+    -moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+    box-shadow: inset 0px 1px 0px 0px #45D6D6;
+    background-color: #2CBBBB;
+    border: 1px solid #27A0A0;
+    display: inline-block;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 14px;
+    padding: 8px 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2pt; 
+    font-weight: bold;
+    border-radius: 10pt; 
+    padding-left: 100px;
+    padding-right: 100px; 
+    opacity: .9; 
+}
+.form-input input[type="button"]:hover, 
+.form-input input[type="submit"]:hover {
+    background:linear-gradient(to bottom, #34CACA 5%, #30C9C9 100%);
+    background-color:#34CACA;
+}
 /* Main elements end */
 
 

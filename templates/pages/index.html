@@ -1,11 +1,19 @@
 {% extends 'layouts/main.html' %}
 {% block title %}Nomad{% endblock %}
 {% block content %}
-HELLO
 <div class="app-container">
-	<h1 class="main-title">Nomad</h1>
-	<div class="location">
-		<input type=text placeholder="location"></input>
+	<div class="title-page">
+		<h1 class="main-title">Nomad</h1>
+		<div class="form-input">
+		  <form>
+		    <input type="text" name="field1" placeholder="Location" />
+		    <input type="email" name="field2" placeholder="Email" />
+		    <input type="url" name="field3" placeholder="Website" />
+		    <textarea placeholder="Message" onkeyup="adjust_textarea(this)"></textarea>
+		    <input type="button" value="Explore" />
+		  </form>
+		</div>
 	</div>
+
 </div>
 {% endblock %}
