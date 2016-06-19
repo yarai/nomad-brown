@@ -4,7 +4,7 @@ function Yelp() {
 	this.token = 'LhUxV_6ECjmJhMDLW2Qadk-ZBT3nhjOe';
 	this.tokenSecret = 'ynX4K_ikxxjp-LUorCsPgzKZflU';
 
-	this.request = function(location, ) {
+	// this.request = function(location, ) {
 		
-	}
+	// }
 }
