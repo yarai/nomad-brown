@@ -1,23 +1,44 @@
 {% extends 'layouts/main.html' %}
 {% block title %}Nomad{% endblock %}
 {% block style %}
-	<link type="text/css" rel="stylesheet" href="/static/css/events.css" />
-	<link type="text/css" rel="stylesheet" href="/static/css/slick.css" />
+<link type="text/css" rel="stylesheet" href="/static/css/slick.css" />
+<link type="text/css" rel="stylesheet" href="/static/css/slick-theme.css" />
+<link type="text/css" rel="stylesheet" href="/static/css/events.css" />
 {% endblock %}
 {% block content %}
-<div class="single-item">
-	<div></div>
-	<div></div>
-	<div></div>
-	<div></div>
-	<div></div>
-	<div></div>
-	<div></div>
-	<div></div>
+<div id="topbar">
+	<img src="static/img/logo.svg" class="image">
 </div>
+<div id="topcontrols">
+	<input id="location" type="text" name="location" placeholder="Location" />
+	<input id="duration" type="text" name="duration" placeholder="End Time"/>
+	​
+	<div id="travel"><img src="/static/img/icons/walking.svg" height=30 width=30><img src="/static/img/icons/car-rental.svg" height=30 width=30><img src="/static/img/icons/bus-station.svg" height=30 width=30></div>
+
+	<img src="/static/img/icons/bus-station.svg" id="toggle">
+
+	<div id="choices">
+	</div>
+</div>
+
+<div id="carousal">
+	<div class="modal">
+		<img src="/static/img/icons/bus-station.svg"> bs
+	</div>
+	<div class="modal">
+		<img src="/static/img/icons/bus-station.svg"> Bus
+	</div>
+	<div class="modal">
+		<img src="/static/img/icons/bus-station.svg"> few
+	</div>
+</div> 
+
+<input id="actionbutton" type="button" value="Explore" />
+​
 {% endblock %}
 {% block script %}
-	<script type="text/javascript" src="/static/js/slick.js" defer></script>
-	<script type="text/javascript" src="/static/js/common.js" defer></script>
-	<script type="text/javascript" src="/static/js/events.js" defer></script>
+
+<script type="text/javascript" src="/static/js/slick.js" defer></script>
+<script type="text/javascript" src="/static/js/events.js" defer></script>
+<script type="text/javascript" src="/static/js/carousal.js" defer></script>
 {% endblock %}
