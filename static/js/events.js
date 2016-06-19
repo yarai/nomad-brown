@@ -25,7 +25,8 @@ function carousel(thing, index, array) {
     // console.log(thing)
     var modal = document.createElement("div")
     modal.class = "modal"
-    var text = document.createTextNode(thing.name.text)
+    var h = document.createElement("H1")
+    h.appendChild(document.createTextNode(thing.name.text))
 
     var des = document.createTextNode(thing.description.text)
     // des.align = "center"
@@ -40,7 +41,7 @@ function carousel(thing, index, array) {
 
     var img = document.createElement("IMG")
     // img.align = "center"
-    p.appendChild(text)
+    p.appendChild(h)
     modal.appendChild(p)
     p2.appendChild(des)
     
