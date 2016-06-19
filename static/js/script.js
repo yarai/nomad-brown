@@ -8,7 +8,7 @@
 		minChars: 2,
 		source: function(term, suggest){
         term = term.toLowerCase();
-        var choices = ['San Francisco', 'San Jose', 'Asp'];
+        var choices = ['San Francisco', 'San Jose', ''];
         var matches = [];
         for (i=0; i<choices.length; i++)
             if (~choices[i].toLowerCase().indexOf(term)) matches.push(choices[i]);

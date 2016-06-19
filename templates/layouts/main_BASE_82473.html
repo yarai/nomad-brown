@@ -1,0 +1,167 @@
+<!doctype html>
+<head>
+<meta charset="utf-8">
+<title>{% block title %}{% endblock %}</title>
+
+<!-- meta -->
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- /meta -->
+
+<!-- styles -->
+<!-- <link type="text/css" rel="stylesheet" href="/static/css/font-awesome-4.1.0.min.css" />
+<link type="text/css" rel="stylesheet" href="/static/css/bootstrap-3.1.1.min.css">
+<link type="text/css" rel="stylesheet" href="/static/css/bootstrap-theme-3.1.1.min.css" /> 
+<link type="text/css" rel="stylesheet" href="/static/css/layout.main.css" />-->
+<link type="text/css" rel="stylesheet" href="/static/css/jquery.auto-complete.css" />
+<link type="text/css" rel="stylesheet" href="/static/css/main.responsive.css" />
+<link type="text/css" rel="stylesheet" href="/static/css/main.quickfix.css" />
+{% block style %}{% endblock %}
+<!-- /styles -->
+
+<!-- favicons -->
+<link rel="shortcut icon" href="/static/ico/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/static/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/static/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="/static/ico/apple-touch-icon-57-precomposed.png">
+<link rel="shortcut icon" href="/static/ico/favicon.png">
+<!-- /favicons -->
+
+<!-- scripts -->
+<script src="/static/js/libs/modernizr-2.8.2.min.js"></script>
+
+<script type="text/javascript" src="/static/js/libs/sha1.js" ></script>
+<script type="text/javascript" src="/static/js/libs/oauth.js" ></script>
+<script type="text/javascript" src="/static/js/libs/jquery.min.js"  ></script>
+
+<!--<script src="/static/js/yelp.js"></script> -->
+
+
+<!--[if lt IE 9]><script src="/static/js/libs/respond-1.4.2.min.js"></script><![endif]-->
+<!-- /scripts -->
+
+</head>
+<body>
+
+  <!-- Wrap all page content here -->
+  <div id="wrap">
+
+    <!-- Begin page content -->
+    <main id="content" role="main" class="container">
+      {% block content %}{% endblock %}
+      
+    </main>
+
+  </div>
+
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script type="text/javascript" src="/static/js/libs/jquery-1.11.1.min.js"><\/script>')</script>
+  <script type="text/javascript" src="/static/js/libs/bootstrap-3.1.1.min.js" defer></script>
+  <script type="text/javascript" src="/static/js/plugins.js" defer></script>
+  <script type="text/javascript" src="/static/js/script.js" defer></script>
+<<<<<<< HEAD
+  <script type="text/javascript" src="static/js/common.js" defer></script>
+  <script type="text/javascript" src="static/js/eventbrite.js" defer></script>
+=======
+  <script type="text/javascript" src="/static/js/common.js" defer></script>
+  <script type="text/javascript" src="/static/js/yelp.js" defer></script>
+  <script type="text/javascript" src="/static/js/eventbrite.js" defer></script>
+>>>>>>> 97fcb24bc4eafbe8f18ff7754da877512ec91fcf
+  {% block script %}{% endblock %}
+  <!-- Google Analytics - Change UA-XXXXX-X to be your site's ID -->
+  <script>
+    window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
+  Modernizr.load({
+    load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+  });
+
+  </script>
+  
+  <script type="text/html" id="yelp-businesses">    
+    
+       <a data-bind="attr: {href: businessUrl}" class="list-group-item">
+          <span data-bind="text: businessIx"></span>.
+          <span  data-bind="text: name" ></span>
+          <br/>
+          <span data-bind="html: address"></span>
+          <br/>
+          <span data-bind="text: reviewCount"></span> reviews
+          <img data-bind="attr:{src:ratingsImg}" />
+      </a>
+    
+  </script>
+   
+  
+    <div id="map-canvas"></div>
+
+  <div id="listResults" class=" navbar-fixed-top">
+    <div class="listAlign">  
+      <div id="well1">
+          <div id="errorMsg"></div>
+        <form onsubmit="return false">
+          <div class="text-center container-full" >
+            <span id="dealsId">
+            <input  class="filterText"  data-bind="value: model.filter, valueUpdate: 'afterkeydown'" placeholder="type to filter list" />  
+              <a href="#"  data-bind="click: toggleMenu">
+                <span class="menuPullOut"  data-bind="text: model.menuExpanded"></span>                 
+              </a>
+              <br/>
+            
+              <input type="checkbox" data-bind="checked:model.includeDeals, valueUpdate: 'afterkeydown'"/>
+              include deals
+            </span>
+          </div>
+        </form>         
+      </div>
+      <div  class="" id="well2"  data-bind="visible: model.showMenu">
+          <div class="list-group  yelpResult">
+            <span  data-bind="template: {name: 'yelp-businesses', foreach: filteredBusinesses}"></span>
+          </div>
+      </div>      
+    </div>
+  </div>
+  
+  
+    <!--google map scripts-->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <!--<script src="/static/js/GoogleMap.js"></script>-->
+    <script type="text/javascript" src="/static/js/libs/knockout-3.2.0.js" ></script>
+    
+    <script type="text/javascript" src="/static/js/yelpConstants.js" ></script>
+    
+
+  
+
+    
+    <script type="text/javascript" src="/static/js/Business.js"  ></script>
+    <script type="text/javascript" src="/static/js/YelpQueries.js" ></script>   
+    <script type="text/javascript" src="/static/js/Manager.js" ></script>
+
+      <!--initializing of yelp & map elements-->
+  <script type="text/javascript">
+    
+    //creates the plus/- expandable list of places:
+    //var santaCruzBoardwalk = new google.maps.LatLng(LATITUDE, LONGITUDE); 
+
+    var mgr ;
+    var yelpQuery ;
+    google.maps.event.addDomListener(window, 'load', initialize);
+  
+  ///this function is called after the map has loaded 
+  //it makes calls to yelp to load our business list
+    function initialize()
+    {
+    //initia our map
+      
+      //query yelp to get data for mapping
+      yelpQuery =  new YelpQueries('yelpQuery.fillYelpData','yelpQuery.errorInAjax',initKnockout,errorRetrievingYelp,800);
+      yelpQuery.loadBusinesses();
+    }
+    
+  </script>
+
+
+</body>
+</html>
