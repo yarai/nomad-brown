@@ -8,10 +8,6 @@
 /*****************************************************************************
  * Main elements
  ****************************************************************************/
-@font-face {
-    font-family: "Karton";
-    src: url(/static/fonts/Karton.otf) format("truetype");
-}
 html {
   overflow-y: scroll;
 }
@@ -29,12 +25,6 @@ a {
 ::-webkit-selection {
   background: #555;
   color: #FFF;
-}
-
-.main-title {
-	color: white;
-	font-family: 'Karton';
-	font-size: 34px;
 }
 
 body {
@@ -61,10 +51,9 @@ body {
 }
 .form-input{
     font-family: 'Helvetica', arial, sans;
-    width: 500px;
-    padding: 30px;
+    width: 300px;
+    padding: 5px;
     background-color: black;
-    margin: 50px auto;
 }
 .form-input input[type="text"],
 .form-input input[type="date"],
@@ -128,6 +117,8 @@ body {
 .form-input input[type="submit"]:hover {
     background:linear-gradient(to bottom, #34CACA 5%, #30C9C9 100%);
     background-color:#34CACA;
+    text-align: center;
+    margin:auto;
 }
 /* Main elements end */
 
