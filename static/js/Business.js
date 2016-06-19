@@ -7,18 +7,18 @@
 */
 
 var Business = function(businessIx,
-									businessId,
-									businessName,
-									businessUrl,
-									businessImage,
-									businessAddress,
-									mobileUrl,
-									ratingsImg,
-									reviewCount,
-									latitude,
-									longitude,
-									yelpCategories,
-									yelpDeals)
+	businessId,
+	businessName,
+	businessUrl,
+	businessImage,
+	businessAddress,
+	mobileUrl,
+	ratingsImg,
+	reviewCount,
+	latitude,
+	longitude,
+	yelpCategories,
+	yelpDeals)
 {
 	this.name = ko.observable(businessName);
 	this.businessId = ko.observable(businessId);
