@@ -1,3 +1,4 @@
+console.log("ho")
 
 var location = getParameterByName("location")
 var end_time = getParameterByName("endtime")
