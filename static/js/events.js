@@ -14,14 +14,14 @@ function Eventbrite () {
 function printResponse(json) {
   parsed = JSON.parse(json)
   console.log(parsed.events)
-  parsed.events.forEach(carousel) 
+  parsed.events.slice(0, 5).forEach(carouselEventbrite) 
 
     $('#carousal').slick({
         arrows: false
     });
 }
 
-function carousel(thing, index, array) {
+function carouselEventbrite(thing, index, array) {
     // console.log(thing)
     var modal = document.createElement("div")
     modal.class = "modal"
@@ -32,15 +32,23 @@ function carousel(thing, index, array) {
     // des.align = "center"
     var url = document.createElement("a")
     // url.align = center
-    url.href = thing.url
-    url.innerHTML = "LINK"
+    url.href = thing.vanity_url
+    url.innerHTML = thing.vanity_url
     var p = document.createElement("p")
     var p2 = document.createElement("p")
     var p3 = document.createElement("p")
     var p4 = document.createElement("p")
 
     var img = document.createElement("IMG")
-    // img.align = "center"
+    // h.style.margin = "auto"
+    // url.style.margin = "auto"
+    // des.style.margin = "auto"
+    // img.style.margin = "auto"
+    // // img.align = "center"
+    // p.style.margin = "auto"
+    // p2.style.margin = "auto"
+    // p3.style.margin = "auto"
+    // p4.style.margin = "auto"
     p.appendChild(h)
     modal.appendChild(p)
     p2.appendChild(des)

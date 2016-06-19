@@ -107,6 +107,8 @@ YelpQueries.prototype.fillYelpData = function(data)
 		}
 		
 	}
+
+	myBusinesses.slice(0,10).forEach(carouselYelp)
 	console.log(myBusinesses);
 	console.log(data)
 	console.log("----")
@@ -352,3 +354,41 @@ YelpQueries.prototype.loadBusinessesWithDeals = function()
 
 	this.offset += 2;
 };
+
+myBusinesses.forEach(carouselYelp)
+
+function carouselYelp(thing, index, array) {
+    // console.log(thing)
+    var modal = document.createElement("div")
+    modal.class = "modal"
+    var h = document.createElement("H1")
+    h.appendChild(document.createTextNode(thing.name))
+    var url = document.createElement("a")
+    // url.align = center
+    url.href = thing.link
+    url.innerHTML = "Learn more about " + thing.name
+    var p = document.createElement("p")
+    var p3 = document.createElement("p")
+    var p4 = document.createElement("p")
+
+    var img = document.createElement("IMG")
+    p.appendChild(h)
+    modal.appendChild(p)
+    
+    p3.appendChild(url)
+
+    modal.appendChild(p3)
+    p4.appendChild(img)
+
+    
+    if (thing.logo) {
+      img.src = thing.image
+    }
+    
+    modal.appendChild(p4)
+    
+
+
+
+    document.getElementById("carousal").appendChild(modal)
+  }
