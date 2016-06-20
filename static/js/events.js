@@ -13,8 +13,63 @@ function Eventbrite () {
 
 function printResponse(json) {
   parsed = JSON.parse(json)
-  console.log(parsed)
+  console.log(parsed.events)
+  parsed.events.slice(0, 5).forEach(carouselEventbrite) 
+
+    $('#carousal').slick({
+        arrows: false
+    });
 }
+
+function carouselEventbrite(thing, index, array) {
+    // console.log(thing)
+    var modal = document.createElement("div")
+    modal.class = "modal"
+    var h = document.createElement("H1")
+    h.appendChild(document.createTextNode(thing.name.text))
+
+    var des = document.createTextNode(thing.description.text)
+    // des.align = "center"
+    var url = document.createElement("a")
+    // url.align = center
+    url.href = thing.vanity_url
+    url.innerHTML = thing.vanity_url
+    var p = document.createElement("p")
+    var p2 = document.createElement("p")
+    var p3 = document.createElement("p")
+    var p4 = document.createElement("p")
+
+    var img = document.createElement("IMG")
+    // h.style.margin = "auto"
+    // url.style.margin = "auto"
+    // des.style.margin = "auto"
+    // img.style.margin = "auto"
+    // // img.align = "center"
+    // p.style.margin = "auto"
+    // p2.style.margin = "auto"
+    // p3.style.margin = "auto"
+    // p4.style.margin = "auto"
+    p.appendChild(h)
+    modal.appendChild(p)
+    p2.appendChild(des)
+    
+    modal.appendChild(p2)
+    p3.appendChild(url)
+
+    modal.appendChild(p3)
+    p4.appendChild(img)
+
+    
+    if (thing.logo) {
+      img.src = thing.logo.url
+    }
+    
+    modal.appendChild(p4)
+    
+
+
+    document.getElementById("carousal").appendChild(modal)
+  }
 
 function httpGetAsync(theUrl, callback) {
     var xmlHttp = new XMLHttpRequest();

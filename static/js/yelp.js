@@ -1,10 +1,6 @@
 //do not use this file lmao, doesn't work... use yelpQueries.js
 /* require the modules needed */
-var oauthSignature = require('oauth-signature');  
-var n = require('nonce')();  
-var request = require('request');  
-var qs = require('querystring');  
-var _ = require('lodash');
+
 
 /* Function for yelp call
  * ------------------------
